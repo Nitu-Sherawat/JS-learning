@@ -68,3 +68,24 @@ console.log(boolIsLoggedIn);
 
 
  // Note : string -> dataType , String -> Object
+
+ /********************* Operations ***************/
+
+ console.log(2**4) // 2 power 4 =>16
+
+ console.log("1"+2) // 12
+ console.log(1+2+"1") //31
+ console.log("1"+2+3) //123
+
+ console.log(+true) //1
+ console.log(+"") //0
+
+ /* Prefix , Postfix */
+
+ let ct = 0;
+ let ct1 = ++ct; 
+ let ct2 = ct++;
+
+ console.log(ct1); // --> 1
+ console.log(ct2); // --> 1
+ console.log(ct) // -->2
