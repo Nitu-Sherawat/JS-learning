@@ -31,3 +31,39 @@ symbol => uniqueness
 /* 
     Null => Standalone value
 */
+
+/*
+     
+   (Reference) Non-primitives : Array , Objects , Functions etc
+
+*/
+
+// Note : Js is dynamically typed
+
+const id = Symbol('123')
+const anotherId = Symbol('123')
+
+console.log(id);
+console.log(anotherId);
+console.log(id==anotherId); // false
+console.log(id===anotherId); //false
+
+// Array : 
+ const names = ["nitu","devam","mansa","utsav"];
+ console.log(names);
+
+ // Object
+ let myObj ={
+    name:"Nitu",
+    age : 17
+ }
+ console.log(myObj);
+
+ // Function
+ const myFunc = function(){
+    console.log("Hello World");
+ }
+
+ console.log(typeof names); // Obj
+ console.log(typeof myObj); // Obj
+ console.log(typeof myFunc); // Obj
