@@ -57,7 +57,7 @@ console.log(boolIsLoggedIn);
 
 /**
  If isLoggedIn = "";
- type of boolIsLoogeIn = boolean 
+ type of boolIsLoggedIn = boolean 
  boolIsLoggedIn = 0
 
  If isLoggedIn = "nitu";
