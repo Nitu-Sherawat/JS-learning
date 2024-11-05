@@ -58,4 +58,6 @@ const books = [
 
     // Q: Add the publish year of books
 
-    cos
+    const publishAdd = books.reduce((accumulate,book)=>accumulate+book.publish,0);
+
+    console.log(publishAdd);
