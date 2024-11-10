@@ -2,17 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DOM Learning Edit and Remove</title>
+    <title>DOM Learning</title>
+    <style>
+       .bg-black{
+        background-color: black;
+        color:white;
+       }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading"> Hello Everyone</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
-    </div>
+<body class="bg-black">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
 </body>
 <script>
 
+// Function to add items in ul
 
+function addLang(langName){
+    const li = document.createElement('li');
+    li.innerHTML = `${langName}`;
+    document.querySelector('.language').appendChild(li);
+}
+addLang("python")
+addLang("Java")
+
+// Optimise using DSA
+
+function addLangOpti(langName){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li);
+}
+
+addLangOpti("Go-Lang")
+
+// Prefer appendChild not innerHTML
+
+/** To edit element **/
+
+const newli = document.querySelector('li:nth-child(2)');
+// newli.innerHTML = 'mojo' // Not optimised
+/**** Optimised ***/
+const changeLang = document.createElement('li');
+changeLang.textContent = "Mojo";
+newli.replaceWith(changeLang);
+
+/* Q : Replace javascript by typescript*/
+
+const js = document.querySelector('li:nth-child(1)');
+// const ts = document.createElement('li');
+// ts.textContent="Typescript";
+// js.replaceWith(ts);
+js.outerHTML = '<li>TypeScript</li>'
+
+
+/** To Remove element **/
+
+const lastLang = document.querySelector('li:last-child');
+lastLang.remove();
+
+//Resource : w3school DOM practice
 
 </script>
 </html>
